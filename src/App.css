@@ -1,15 +1,20 @@
 @import '~antd/dist/antd.css';
 
-
 .ant-layout-footer {
   text-align: center;
   background-color: darkolivegreen;
   color: white;
 }
 
-.site-layout-content {
+.ant-layout-content {
   min-height: 100vh;
   padding: 24px;
+  background-color: #e2f0f9;
+  padding: 0px 50px;
+}
+
+.logo {
+  font-size: x-large;
 }
 
 #components-layout-demo-top .logo {
@@ -23,4 +28,8 @@
 .ant-row-rtl #components-layout-demo-top .logo {
   float: right;
   margin: 16px 0 16px 24px;
+}
+
+#workshop-page .ant-image {
+  display: unset;
 }

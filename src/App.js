@@ -1,21 +1,17 @@
-import './App.css';
-import {Layout} from 'antd';
-import Navbar from './components/Navbar';
+import React from 'react'; 
+import { Layout } from 'antd';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import WorkshopsPage from './components/WorkshopsPage';
+
+import './App.css';
 
 const { Header, Content, Footer } = Layout;
 
-const Page = ({ pageName }) => {
-  return (
-    <div className="site-layout-content">
-      {pageName}
-    </div>
-  );
-}
+const Page = ({ pageName }) => <h1>{pageName}</h1>;
 
-const HomePage = () => {
-  return <Page pageName={"עמוד הבית"} />
-}
+const HomePage = () => <Page pageName={"עמוד הבית"} />;
 const AboutPage = () => <Page pageName={"אודותיי"} />;
 const PlaybackPage = () => <Page pageName={"פלייבק"} />;
 const TherapyPage = () => <Page pageName={"טיפול"} />;
@@ -28,13 +24,14 @@ const App = () => {
         <Header >
           <Navbar />
         </Header>
-        <Content style={{padding: '0px 50px'}}>
+        <Content>
           <Routes>
             <Route path="/home" element={<HomePage/>} />
             <Route path="/about" element={<AboutPage/>} />
+            <Route path="/workshops" element={<WorkshopsPage/>} />
             <Route path="/playback" element={<PlaybackPage/>} />
             <Route path="/therapy" element={<TherapyPage/>} />
-            <Route path="/" element={<HomePage/>} />
+            <Route path="/" element={<WorkshopsPage />} />
           </Routes>          
       </Content>
         <Footer>
