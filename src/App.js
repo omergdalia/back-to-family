@@ -1,29 +1,45 @@
-import hometown from './images/hometown.jpg';
+import React from 'react'; 
+import { Layout } from 'antd';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import WorkshopsPage from './components/WorkshopsPage';
 
 import './App.css';
 
-function App() {
+const { Header, Content, Footer } = Layout;
+
+const Page = ({ pageName }) => <h1>{pageName}</h1>;
+
+const HomePage = () => <Page pageName={"עמוד הבית"} />;
+const AboutPage = () => <Page pageName={"אודותיי"} />;
+const PlaybackPage = () => <Page pageName={"פלייבק"} />;
+const TherapyPage = () => <Page pageName={"טיפול"} />;
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2 dir='rtl'>
-          ברוכים הבאים לאתר המדהים של איתי שרון!
-        </h2>
-        <br />
-        <img src={hometown} width="40%" alt="home town"/>
-        <br />
-        <a
-          className="App-link"
-          href="https://nissimamon.com/greece/"
-          target="_blank"
-          rel="nissimamon noreferrer"
-        >
-          פסטיבל יוגה וחכמת הלב
-        </a>
-        <br />
-          בהנחיית: ניסים אמון
-      </header>
-    </div>
+    <BrowserRouter basename='/'>
+      <Layout className="layout" dir="rtl">
+        <Header >
+          <Navbar />
+        </Header>
+        <Content>
+          <Routes>
+            <Route path="/home" element={<HomePage/>} />
+            <Route path="/about" element={<AboutPage/>} />
+            <Route path="/workshops" element={<WorkshopsPage/>} />
+            <Route path="/playback" element={<PlaybackPage/>} />
+            <Route path="/therapy" element={<TherapyPage/>} />
+            <Route path="/" element={<WorkshopsPage />} />
+          </Routes>          
+      </Content>
+        <Footer>
+          Back to Family, Etay Sharon ©2022
+        </Footer>
+      </Layout>;
+
+    </BrowserRouter>
   );
 }
 
