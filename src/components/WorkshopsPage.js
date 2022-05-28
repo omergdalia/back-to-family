@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Card, Space, Row, Col} from "antd";
+import { Divider, Row, Col} from "antd";
 import { FaPhoneSquare } from 'react-icons/fa';
 
 import SeminarProgram from "./workshops/SeminarProgram";
