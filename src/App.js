@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { Layout, Affix } from 'antd';
+import { Layout, Affix, BackTop} from 'antd';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -20,6 +20,7 @@ const TherapyPage = () => <Page pageName={"טיפול"} />;
 const App = () => {
   return (
     <BrowserRouter basename='/'>
+      <BackTop />
       <Layout className="layout" dir="rtl">
         <Affix offsetTop={0}>
           <Header >

@@ -1,7 +1,6 @@
 import React from "react";
 import { Avatar , Card, Space} from 'antd';
 
-
 import etayPhoto from '../../images/personel/etay-sharon.jpg'
 import orlyPhoto from '../../images/personel/orly-kovo.jpg'
 

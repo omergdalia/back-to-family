@@ -48,7 +48,7 @@
 }
 
 .ant-space-item .ant-card {
-  width: 25em;
+  max-width: 25em;
   margin: 0 0.5em 0 0;
   font-size: inherit !important;
 }
@@ -57,4 +57,9 @@
 .ant-collapse-header svg {
   transform: rotate(180deg);
   margin-left: 1em;
+}
+
+.ant-back-top {
+  left: 5vh;
+  bottom: 8vh;
 }

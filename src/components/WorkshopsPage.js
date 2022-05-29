@@ -1,6 +1,6 @@
 import React from "react";
-import { Divider, Row, Col} from "antd";
-import { FaPhoneSquare } from 'react-icons/fa';
+import { Col, Divider, Row } from "antd";
+import { FaPhone } from 'react-icons/fa';
 
 import SeminarProgram from "./workshops/SeminarProgram";
 import Gallery from "./workshops/SeminarGallery";  
@@ -13,8 +13,8 @@ const ContactView = () => {
     return <>
         <div style={myStyle}>
             <h3>לפרטים ולהרשמה:</h3>
-            <FaPhoneSquare /> אורלי - 050-7266778 <br/>
-            <FaPhoneSquare /> איתי - 054-4588573
+            <FaPhone /> אורלי - 050-7266778 <br/>
+            <FaPhone /> איתי - 054-4588573
         </div>
         <ContactForm givenStyle={myStyle} />
     </>
@@ -57,11 +57,23 @@ const WorkshopsPage = () => {
         <h2>על הריזורט שלנו</h2>
         <p>
             מתחם של וילות מפנקות עם חוף ים צמוד
-            <li>
-
-            </li>
+            <ul>
+                <li>
+                    חדר זוגי בוילה - כל וילה מכילה 2 חדרים זוגיים נוחים ויפים, עם מיזוג אוויר, מיטות נוחות, מטבח מאובזר, מקלחת ושירותים, סלון, טלוויזיה ומרפסת באוויר הפתוח לנוף עוצר נשימה
+                </li>
+                <li>
+                במתחם קיים חלל מרווח ונעים לסדנאות, פינות ישיבה חיצוניות המשקיפות לים ולנוף הפתוח, פינת אוכל חיצונית ועוד.
+                </li>
+            </ul>
+            <h3>חוף הים</h3>
+                לברר עם הארי האם יש שמשיות וציוד לים. באתר כתוב שיש: מגבות חוף, שמשייה, מחצלת חוף, מסכות צלילה ושנורקלים<br />
+                <b>הריזורט ממוקם באזור FERMA</b><br />
+                הריזורט נמצא במיקום מצוין – מרחק של שעה וחצי נסיעה משדה"ת הרקליון, 10 דק' נסיעה מהעיר העתיקה - איראפטרה 
         </p>
         
+        <Divider />
+        <h2>על החבילה</h2>
+
     </div>
 }
 
