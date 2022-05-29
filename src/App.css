@@ -38,3 +38,23 @@
 .ant-timeline-item-content {
   margin: 0px 2em !important;  
 }
+
+.ant-space {
+  grid-gap: 1em !important;
+}
+
+.ant-space-item {
+  background-color: #df4c73;
+}
+
+.ant-space-item .ant-card {
+  width: 25em;
+  margin: 0 0.5em 0 0;
+  font-size: inherit !important;
+}
+
+
+.ant-collapse-header svg {
+  transform: rotate(180deg);
+  margin-left: 1em;
+}
