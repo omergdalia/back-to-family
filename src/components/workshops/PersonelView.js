@@ -17,7 +17,7 @@ const personelInfo = [
 ]
 
 const PesonalView = () => <Space align="start">
-    {personelInfo.map(({name, content}) => <PersonelCard name={name} content={content}/>)}
+    {personelInfo.map(({name, content}) => <PersonelCard key={name} name={name} content={content}/>)}
 </Space>;
 
 export default PesonalView;
