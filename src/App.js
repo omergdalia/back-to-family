@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { Layout } from 'antd';
+import { Layout, Affix, BackTop} from 'antd';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -20,10 +20,13 @@ const TherapyPage = () => <Page pageName={"טיפול"} />;
 const App = () => {
   return (
     <BrowserRouter basename='/'>
+      <BackTop />
       <Layout className="layout" dir="rtl">
-        <Header >
-          <Navbar />
-        </Header>
+        <Affix offsetTop={0}>
+          <Header >
+            <Navbar />
+          </Header>
+        </Affix>
         <Content>
           <Routes>
             <Route path="/home" element={<HomePage/>} />
@@ -33,12 +36,11 @@ const App = () => {
             <Route path="/therapy" element={<TherapyPage/>} />
             <Route path="/" element={<WorkshopsPage />} />
           </Routes>          
-      </Content>
-        <Footer>
+        </Content>
+        <Footer> 
           Back to Family, Etay Sharon ©2022
         </Footer>
       </Layout>;
-
     </BrowserRouter>
   );
 }

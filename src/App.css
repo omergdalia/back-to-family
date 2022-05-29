@@ -4,6 +4,7 @@
   text-align: center;
   background-color: darkolivegreen;
   color: white;
+  padding: 0.5em;
 }
 
 .ant-layout-content {
@@ -13,7 +14,7 @@
   padding: 0px 50px;
 }
 
-.logo {
+/* .logo {
   font-size: x-large;
 }
 
@@ -23,13 +24,42 @@
   height: 31px;
   margin: 16px 24px 16px 0;
   background: rgba(255, 255, 255, 0.3);
-}
-
+} */
+/* 
 .ant-row-rtl #components-layout-demo-top .logo {
   float: right;
   margin: 16px 0 16px 24px;
-}
+} */
 
 #workshop-page .ant-image {
   display: unset;
+}
+
+.ant-timeline-item-content {
+  margin: 0px 2em !important;  
+}
+
+.ant-space {
+  grid-gap: 1em !important;
+}
+
+.ant-space-item {
+  background-color: #df4c73;
+}
+
+.ant-space-item .ant-card {
+  max-width: 25em;
+  margin: 0 0.5em 0 0;
+  font-size: inherit !important;
+}
+
+
+.ant-collapse-header svg {
+  transform: rotate(180deg);
+  margin-left: 1em;
+}
+
+.ant-back-top {
+  left: 5vh;
+  bottom: 8vh;
 }

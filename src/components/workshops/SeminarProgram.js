@@ -7,9 +7,9 @@ import programs from './programs.json';
 const { Panel } = Collapse;
 
 const DayProgram = ({activities}) => {
-    return <Timeline>
+    return <Timeline mode="right">
         {activities.map(({time, details}) => (
-            <Timeline.Item dot={<ClockCircleOutlined className="timeline-clock-icon" fontSize/>} color="blue">
+            <Timeline.Item key={time} dot={<ClockCircleOutlined className="timeline-clock-icon"/>} color="blue">
                 <b>{time}: </b>
                 {details}
             </Timeline.Item>
