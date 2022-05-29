@@ -33,3 +33,7 @@
 #workshop-page .ant-image {
   display: unset;
 }
+
+.ant-timeline-item-content {
+  margin: 0px 2em !important;  
+}
