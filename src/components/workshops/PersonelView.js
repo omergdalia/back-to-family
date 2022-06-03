@@ -10,7 +10,14 @@ const { Meta } = Card;
 const PersonelCard = ({name, content, image}) => {
     return (
         <Card hoverable>
-            <Meta title={name} avatar={<Avatar src={image} size="large"/>}/>
+            <Meta 
+            title={name} 
+            avatar={
+                <Avatar 
+                src={image} 
+                size={{ xs: 64, sm: 64, md: 64, lg: 80, xl: 80, xxl: 80 }}/>
+            }
+        />
             <i> {content} </i>
         </Card>
     );

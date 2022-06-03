@@ -1,11 +1,26 @@
 import React from "react";
 import { Carousel, Image } from "antd";
 
-import crete1 from '../../images/crete/crete1.webp';
-import crete2 from '../../images/crete/crete2.webp';
-import crete3 from '../../images/crete/crete3.webp';
-import crete4 from '../../images/crete/crete4.webp';
-import crete5 from '../../images/crete/crete5.webp';
+import crete1 from '../../images/crete/crt1.png';
+import crete2 from '../../images/crete/crt2.png';
+import crete3 from '../../images/crete/crt3.png';
+import crete4 from '../../images/crete/crt4.png';
+import crete5 from '../../images/crete/crt5.png';
+import crete6 from '../../images/crete/crt6.png';
+import crete7 from '../../images/crete/crt7.png';
+
+
+const galleryImages = [
+    {alt: "crete1", src: crete1},
+    {alt: "crete2", src: crete2},
+    {alt: "crete3", src: crete3},
+    {alt: "crete4", src: crete4},
+    {alt: "crete5", src: crete5},
+    {alt: "crete6", src: crete6},
+    {alt: "crete7", src: crete7},
+
+]
+
 
 const contentStyle = {
     height:'400px',
@@ -22,12 +37,14 @@ const carouselStyle ={
 }
   
 const Gallery = () => (
-    <Carousel autoplay id="crete-seminar-gallery" style={carouselStyle}>
-        <div><Image src={crete1} alt="Crete 1" style={contentStyle} /></div>
-        <div><Image src={crete2} alt="Crete 2" style={contentStyle}/></div>
-        <div><Image src={crete3} alt="Crete 3" style={contentStyle} /></div>
-        <div><Image src={crete4} alt="Crete 4" style={contentStyle}/></div>
-        <div><Image src={crete5} alt="Crete 5" style={contentStyle} /></div>
+    <Carousel id="crete-seminar-gallery" style={carouselStyle}>
+        {
+            galleryImages.map(({alt, src}) => 
+                <div>
+                    <Image src={src} preview={false} alt={alt} style={contentStyle} />
+                </div>
+            )
+        }
     </Carousel>
 );
 

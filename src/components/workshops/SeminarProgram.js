@@ -1,6 +1,5 @@
 import React from "react";
 import { Collapse, Timeline} from "antd";
-import { ClockCircleOutlined } from '@ant-design/icons';
 
 import programs from './programs.json';
 
@@ -9,8 +8,7 @@ const { Panel } = Collapse;
 const DayProgram = ({activities}) => {
     return <Timeline mode="right">
         {activities.map(({time, details}) => (
-            <Timeline.Item key={time} dot={<ClockCircleOutlined className="timeline-clock-icon"/>} color="blue">
-                <b>{time}: </b>
+            <Timeline.Item key={time} color="blue">
                 {details}
             </Timeline.Item>
         ))}       
