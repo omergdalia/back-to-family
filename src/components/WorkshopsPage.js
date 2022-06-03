@@ -1,27 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Col, Divider, Row } from "antd";
-import { FaPhone } from 'react-icons/fa';
+import { Icon } from 'semantic-ui-react';
 
 import SeminarProgram from "./workshops/SeminarProgram";
 import Gallery from "./workshops/SeminarGallery";  
 import ContactForm from "./workshops/ContactForm";
 import PesonalView from "./workshops/PersonelView";
+import PackageView from "./workshops/PackageView";
 
 
-const ContactView = () => {
-    const myStyle = { backgroundColor: "gray"}
-    return <>
+const ContactView = (props) => {
+    const { refProp } = props;
+    const myStyle = { backgroundColor: "gray"};
+    
+    return <div ref={refProp} {...props}>
         <div style={myStyle}>
             <h3>לפרטים ולהרשמה:</h3>
-            <FaPhone /> אורלי - 050-7266778 <br/>
-            <FaPhone /> איתי - 054-4588573
+            <Icon name="phone" /> אורלי - 050-7266778 <br/>
+            <Icon name="phone" /> איתי - 054-4588573
         </div>
         <ContactForm givenStyle={myStyle} />
-    </>
+    </div>
 }
 
 
 const WorkshopsPage = () => {
+
+    const myRef = useRef(null);
+    const executeScroll = () => myRef.current.scrollIntoView()    
+
+
     return <div style={{ fontSize: 16}} id="workshop-page">
         <h1>אינטנסיב פלייבק בכרתים</h1>
         <p>
@@ -33,7 +41,7 @@ const WorkshopsPage = () => {
         <Row>
             <Col span={18}><Gallery /></Col>
             <Col span={6}>
-                <ContactView />
+                <ContactView refProp={myRef} id="contact-us"/>
             </Col>
         </Row>   
         
@@ -72,7 +80,7 @@ const WorkshopsPage = () => {
         </p>
         
         <Divider />
-        <h2>על החבילה</h2>
+        <PackageView title={<h2>על החבילה</h2>} executerScroll={executeScroll}/>
 
     </div>
 }
