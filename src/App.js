@@ -2,14 +2,13 @@ import React from 'react';
 import { Layout, Affix, BackTop} from 'antd';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { Icon } from 'semantic-ui-react';
-
 import Navbar from './components/Navbar';
+import WebFooter from './components/WebFooter';
 import WorkshopsPage from './components/WorkshopsPage';
 
 import './App.css';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 const Page = ({ pageName }) => <h1>{pageName}</h1>;
 
@@ -25,7 +24,7 @@ const App = () => {
       <BackTop />
       <Layout className="layout" dir="rtl">
         <Affix offsetTop={0}>
-          <Header >
+          <Header>
             <Navbar />
           </Header>
         </Affix>
@@ -41,12 +40,7 @@ const App = () => {
           <br />
           <br />
         </Content>
-        <Footer> 
-          בחזרה לשמפחה, איתי שרון ©2022
-          <a href='https://www.facebook.com/etay.sharon' target="_blank" rel="noopener noreferrer">
-            <Icon name="facebook f" />
-          </a>
-        </Footer>
+        <WebFooter />
       </Layout>;
     </BrowserRouter>
   );
