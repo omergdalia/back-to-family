@@ -53,6 +53,9 @@
   font-size: inherit !important;
 }
 
+.ant-collapse {
+  width: 75%;
+}
 
 .ant-collapse-header svg {
   transform: rotate(180deg);
@@ -62,6 +65,10 @@
 .ant-back-top {
   left: 5vh;
   bottom: 8vh;
+}
+
+.ant-descriptions {
+  width: 75%;
 }
 
 .ant-descriptions-divider {

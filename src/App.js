@@ -2,6 +2,8 @@ import React from 'react';
 import { Layout, Affix, BackTop} from 'antd';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { Icon } from 'semantic-ui-react';
+
 import Navbar from './components/Navbar';
 import WorkshopsPage from './components/WorkshopsPage';
 
@@ -36,9 +38,14 @@ const App = () => {
             <Route path="/therapy" element={<TherapyPage/>} />
             <Route path="/" element={<WorkshopsPage />} />
           </Routes>          
+          <br />
+          <br />
         </Content>
         <Footer> 
-          Back to Family, Etay Sharon ©2022
+          בחזרה לשמפחה, איתי שרון ©2022
+          <a href='https://www.facebook.com/etay.sharon' target="_blank" rel="noopener noreferrer">
+            <Icon name="facebook f" />
+          </a>
         </Footer>
       </Layout>;
     </BrowserRouter>

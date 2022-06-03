@@ -10,8 +10,8 @@ const PackageView = ({title, executerScroll}) => (
     bordered
     extra={<Button type="primary" onClick={executerScroll}>צרו קשר</Button>} >
         <Descriptions.Item label="טיסות" span={3}>
-            <MdFlightTakeoff /> טיסה ישירה להרקליון, כרתים בתאריך ה-29.9.22 בשעה 11:40 [ארקיע] <br/>
-            <MdFlightLand /> טיסה ישירה מהרקליון, כרתים בתאריך ה-03.10.22 בשעה 23:50 [אייגיאן] <br />
+            <MdFlightTakeoff /> טיסה ישירה להרקליון, כרתים בתאריך ה-29.9.22 בשעה 11:40 [Aegean] <br/>
+            <MdFlightLand /> טיסה ישירה מהרקליון, כרתים בתאריך ה-03.10.22 בשעה 23:50 [Aegean] <br />
             * יש העברות משדה התעופה בהרקליון לריזורט, בהלוך ובחזור
         </Descriptions.Item>
         <Descriptions.Item label="לינה" span={3}>4 לילות פנסיון מלא</Descriptions.Item>

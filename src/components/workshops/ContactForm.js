@@ -28,39 +28,18 @@ const ContactForm = ({givenStyle}) => {
     console.log(values);
   };
 
+
+  // שדות למילוי - : שם , טלפון, אימייל,  ותק בפלייבק,  הודעה :
   return (
     <Form {...layout} style={{givenStyle}} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
-      <Form.Item
-        name={['user', 'name']}
-        label="Name"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
+      <Form.Item name={['user', 'name']} label="שם" rules={[{required: true}]}>
         <Input />
       </Form.Item>
-      <Form.Item
-        name={['user', 'email']}
-        label="Email"
-        rules={[
-          {
-            type: 'email',
-          },
-        ]}
-      >
+      <Form.Item name={['user', 'email']} label="מייל" rules={[{type: 'email'}]}>
         <Input />
       </Form.Item>
-      <Form.Item
-        name={['user', 'age']}
-        label="Age"
-        rules={[
-          {
-            type: 'number',
-            min: 0,
-            max: 99,
-          },
+      <Form.Item name={['user', 'age']} label="Age" rules={[
+          { type: 'number', min: 0, max: 99 },
         ]}
       >
         <InputNumber />
