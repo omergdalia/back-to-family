@@ -63,3 +63,16 @@
   left: 5vh;
   bottom: 8vh;
 }
+
+.ant-descriptions-divider {
+  color: #df4c73;
+}
+
+.ant-descriptions-view {
+  background-color: #f1f1f1;
+}
+
+.ant-descriptions-view .ant-descriptions-item-label {
+  background-color: #c7dbde;
+  font-weight: bold;
+}
