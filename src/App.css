@@ -1,5 +1,21 @@
 @import '~antd/dist/antd.css';
 
+.ant-layout-header {
+  background-color: #df4c73  ;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+}
+
+.ant-layout-content {
+  margin-top: 50px;
+  min-height: 100vh;
+  padding: 24px;
+  background-color: #e2f0f9;
+  padding: 0px 50px;
+  font-family: Assistant;
+}
+
 .ant-layout-footer {
   text-align: center;
   background-color: darkolivegreen;
@@ -7,29 +23,15 @@
   padding: 0.5em;
 }
 
-.ant-layout-content {
-  min-height: 100vh;
-  padding: 24px;
-  background-color: #e2f0f9;
-  padding: 0px 50px;
-}
-
-/* .logo {
+.logo {
   font-size: x-large;
+  font-family: cursive;
+  font-style: italic;
 }
 
-#components-layout-demo-top .logo {
-  float: left;
-  width: 120px;
-  height: 31px;
-  margin: 16px 24px 16px 0;
-  background: rgba(255, 255, 255, 0.3);
-} */
-/* 
-.ant-row-rtl #components-layout-demo-top .logo {
-  float: right;
-  margin: 16px 0 16px 24px;
-} */
+span.date {
+  font-family: cursive;
+}
 
 #workshop-page .ant-image {
   display: unset;

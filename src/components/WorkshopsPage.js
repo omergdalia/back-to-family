@@ -9,7 +9,6 @@ import ContactForm from "./workshops/ContactForm";
 import PesonalView from "./workshops/PersonelView";
 import PackageView from "./workshops/PackageView";
 
-
 const ContactView = (props) => {
     const { refProp } = props;
     const myStyle = { backgroundColor: "gray"};
@@ -43,7 +42,8 @@ const WorkshopsPage = () => {
     return <div style={{ fontSize: 16}} id="workshop-page">
         <h1>אינטנסיב פלייבק בכרתים</h1>
         <p>
-            <b>תאריכים: </b> 29.09.22 - 03.10.22<br/>
+            <b>תאריכים: </b> 
+            <span className="date">29.09.22 - 03.10.22</span><br/>
             <b>בהנחיית: </b> אורלי קובו ואיתי שרון<br/>
             חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד
             <br/><br/>
