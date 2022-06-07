@@ -9,7 +9,10 @@ const DayProgram = ({activities}) => {
     return <Timeline mode="right">
         {activities.map(({time, details}) => (
             <Timeline.Item key={time} color="blue">
-                {details}
+                {typeof details === "string" 
+                    ? details 
+                    : details.map((activity) => <>{activity}<br/></>)
+                }
             </Timeline.Item>
         ))}       
     </Timeline>
