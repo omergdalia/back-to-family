@@ -46,14 +46,15 @@ const ActivityInfo = () => (
 
 const WorkshopsPage = () => {
     return <div style={{ fontSize: 16}} id="workshop-page">
-        <h1>אינטנסיב פלייבק בכרתים</h1>
-        <p>
-            <b>תאריכים: </b> 
-            <span className="date">29.09.22 - 03.10.22</span><br/>
+        <div id="workshop-header" className="col-1">
+            <h1>אינטנסיב פלייבק בכרתים</h1>
+            <p>
+                <b>תאריכים: </b> 
+                <span className="date">29.09.22 - 03.10.22</span><br/>
+            </p>
             <b>בהנחיית: </b> אורלי קובו ואיתי שרון<br/>
-            חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד
-            <br /><br />
-        </p>
+            חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד 
+        </div>
 
         <div id="top-row">
             <Gallery id="crete-seminar-gallery" />

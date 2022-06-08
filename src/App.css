@@ -16,7 +16,6 @@ side color 2 - #df4c73
 .ant-layout-content {
   margin-top: 50px;
   min-height: 100vh;
-  padding: 24px;
   background-color: #e2f0f9;
   padding: 0px 50px;
   font-family: Assistant;
@@ -38,6 +37,26 @@ side color 2 - #df4c73
 span.date {
   font-family: cursive;
 }
+
+#workshop-header {
+  border-radius: 10px;
+  text-align: center;
+  font-size: larger;
+}
+
+#workshop-header h1 {
+  margin: 0px 0px 7px;
+}
+#workshop-header p1 {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #workshop-header {
+    text-align: right;
+  }  
+}
+
 
 #workshop-page .ant-image {
   display: unset;
@@ -72,7 +91,7 @@ span.date {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   #top-row .ant-carousel .slick-slider {
     height: 200px !important;
   }
