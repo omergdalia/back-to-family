@@ -32,11 +32,10 @@ const carouselStyle ={
     overflow:'hidden',
     height:'400px',
     background:'teal',
-    marginLeft: '50px'
 };
   
-const Gallery = () => (
-    <Carousel id="crete-seminar-gallery" autoplay autoplaySpeed={6000} effect="fade" style={carouselStyle}>
+const Gallery = ({id}) => (
+    <Carousel id={id} autoplay autoplaySpeed={5000} effect="fade" style={carouselStyle}>
         {
             galleryImages.map(({alt, src}) => 
                 <div>

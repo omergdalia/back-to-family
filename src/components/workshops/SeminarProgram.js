@@ -20,7 +20,7 @@ const DayProgram = ({activities}) => {
 
 const SeminarProgram = () => {
     return (
-        <Collapse defaultActiveKey={"1"}>
+        <Collapse defaultActiveKey={"1"} className="col-1">
             <Panel header="יום חמישי" key="1">
                 <DayProgram activities={programs.thursday} />
             </Panel>

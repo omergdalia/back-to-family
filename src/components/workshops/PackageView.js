@@ -5,6 +5,7 @@ import { MdFlightTakeoff, MdFlightLand } from 'react-icons/md';
 
 const PackageView = ({title, executerScroll}) => (
     <Descriptions 
+    className='col-1'
     title={title} 
     size="small"
     bordered
@@ -17,7 +18,7 @@ const PackageView = ({title, executerScroll}) => (
         <Descriptions.Item label="לינה" span={3}>4 לילות פנסיון מלא</Descriptions.Item>
         <Descriptions.Item label="מחיר" span={3} >
             חדר זוגי - 4500 ש"ח לאדם <br />
-            חדר יחיד - 5300 ש"ח
+            חדר יחיד - 5300 ש"ח לאדם
         </Descriptions.Item>
         <Descriptions.Item label="פעילות" span={3}>
             טיול לעיר העתיקה איראפטרה וארוחת ערב בעיר <br />

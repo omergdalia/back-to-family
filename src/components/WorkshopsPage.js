@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Button, Col, Divider, Row } from "antd";
+import { Affix, Button, Col, Divider, Row } from "antd";
 import { Icon } from "semantic-ui-react";
 import { FaUmbrellaBeach } from 'react-icons/fa';
 
@@ -10,15 +10,18 @@ import PackageView from "./workshops/PackageView";
 
 const docsURI = "https://docs.google.com/forms/d/e/1FAIpQLSfp3sond6hgtrdNDZfQenty-iL1BblQak13ZyNUO9XaHewPDQ/viewform?usp=sf_link";
 
-const ContactView = (props) => {
+
+const ContactFromButton = () => <Button id="form-button" type="primary" href={docsURI} target="_blank" >מלאו פרטים</Button>
+
+const ContactView = ({id}) => {
     return (
-        <div {...props} className="contact">
+        <div id={id} className="contact">
             <h3>לפרטים ולהרשמה:</h3>
             <p>
                 <Icon name="phone" /> אורלי - 050-7266778 <br/>
                 <Icon name="phone" /> איתי - 054-4588573<br/>
             </p>
-            <Button id="form-button" type="primary" href={docsURI} target="_blank" >מלאו פרטים</Button>
+            <ContactFromButton />
         </div>
     );
 }
@@ -49,12 +52,11 @@ const WorkshopsPage = () => {
             חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד
             <br ref={myRef}/><br/>
         </p>
-        <Row>
-            <Col span={18}><Gallery /></Col>
-            <Col span={6}>
-                <ContactView id="contact-us"/>
-            </Col>
-        </Row>
+
+        <div id="top-row">
+            <Gallery id="crete-seminar-gallery" />
+            <ContactView id="contact-us"/>
+        </div>
 
         <Divider />
         <h2>אודות האינטנסיב</h2>
@@ -88,7 +90,9 @@ const WorkshopsPage = () => {
         
         <Divider />
         <PackageView title={<h2>על החבילה</h2>} executerScroll={executeScroll}/>
-
+        <Affix offsetBottom={20} dir="ltr" id="fixed-form-button">
+            <ContactFromButton />
+        </Affix>
     </div>
 }
 

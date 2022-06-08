@@ -20,7 +20,7 @@ const { Header, Content } = Layout;
 const App = () => {
   return (
     <BrowserRouter basename='/'>
-      <BackTop />
+      <BackTop duration={1000}/>
       <Layout className="layout" dir="rtl">
         <Header 
           style={{position: 'fixed', zIndex: 1, width: '100%'}}>

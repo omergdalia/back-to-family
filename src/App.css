@@ -61,8 +61,76 @@ span.date {
   font-size: inherit !important;
 }
 
-.ant-collapse {
+#top-row {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  gap: 20px 20px;
+}
+
+#top-row .ant-carousel {
   width: 75%;
+}
+
+#contact-us {
+  width: 25%;
+}
+
+.contact {
+  background-color: #c7dbde;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.contact #form-button {
+  margin: 0 25%;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992) {
+  #top-row .ant-carousel {
+    width: 80%;
+  }
+  #contact-us {
+    width: 20%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  #top-row {
+    display: block;
+  }
+  #top-row .ant-carousel {
+    width: 100%;
+  }
+  #top-row .ant-carousel .slick-slider {
+    height: 200px !important;
+  }
+  #top-row .ant-carousel img {
+    height: 200px !important;
+  }
+  #contact-us {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.col-1 {
+  width: 75%;
+} 
+
+/* Extra small devices (phones 600px and up)*/
+@media only screen and (max-width: 600px) {
+  .col-1 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px){
+  .col-1 {
+    width: 85%;
+  } 
 }
 
 .ant-collapse-header svg {
@@ -73,10 +141,6 @@ span.date {
 .ant-back-top {
   left: 5vh;
   bottom: 8vh;
-}
-
-.ant-descriptions {
-  width: 75%;
 }
 
 .ant-descriptions-divider {
@@ -90,14 +154,4 @@ span.date {
 .ant-descriptions-view .ant-descriptions-item-label {
   background-color: #c7dbde;
   font-weight: bold;
-}
-
-.contact {
-  background-color: #c7dbde;
-  border-radius: 5px;
-  padding: 5%;
-}
-
-#form-button {
-  margin: 0 25%;
 }
