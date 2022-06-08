@@ -1,26 +1,26 @@
 import React, { useRef } from "react";
-import { Col, Divider, Row } from "antd";
+import { Button, Col, Divider, Row } from "antd";
 import { Icon } from "semantic-ui-react";
 import { FaUmbrellaBeach } from 'react-icons/fa';
 
 import SeminarProgram from "./workshops/SeminarProgram";
 import Gallery from "./workshops/SeminarGallery";  
-import ContactForm from "./workshops/ContactForm";
 import PesonalView from "./workshops/PersonelView";
 import PackageView from "./workshops/PackageView";
 
+const docsURI = "https://docs.google.com/forms/d/e/1FAIpQLSfp3sond6hgtrdNDZfQenty-iL1BblQak13ZyNUO9XaHewPDQ/viewform?usp=sf_link";
+
 const ContactView = (props) => {
-    const { refProp } = props;
-    const myStyle = { backgroundColor: "gray"};
-    
-    return <div ref={refProp} {...props}>
-        <div style={myStyle} ref={refProp}>
+    return (
+        <div {...props} className="contact">
             <h3>לפרטים ולהרשמה:</h3>
-            <Icon name="phone" /> אורלי - 050-7266778 <br/>
-            <Icon name="phone" /> איתי - 054-4588573
+            <p>
+                <Icon name="phone" /> אורלי - 050-7266778 <br/>
+                <Icon name="phone" /> איתי - 054-4588573<br/>
+            </p>
+            <Button id="form-button" type="primary" href={docsURI} target="_blank" >מלאו פרטים</Button>
         </div>
-        <ContactForm givenStyle={myStyle} />
-    </div>
+    );
 }
 
 const ActivityInfo = () => (
@@ -28,6 +28,7 @@ const ActivityInfo = () => (
         חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד<br />
         בסדנת האינטנסיב <b>נחקור כיצד לייצר אווירה</b> ופתיחת סצנות בפלייבק דרך תנועה, מוזיקה, דימויים ושימוש בחלל.<br />
         שיטה מיוחדת שפיתחנו להרחבת והעמקת שיקופי הפלייבק, ולהענקת מבט תיאטרלי רב גוונים על סיפורי הגיבור.ה.<br />
+        האינטנסיב יתקיים בקבוצה קטנה ובמתכונת הכוללת גם עבודה אישית לכל משתתפ.ת.<br />
         בנוסף נטייל, נאכל טוב, נבלה בים, נסייר בעיר עתיקה ונהנה מהשקט, השלווה  והיופי שבכרתים הקסומה.<br />
     </p>
     
@@ -46,12 +47,12 @@ const WorkshopsPage = () => {
             <span className="date">29.09.22 - 03.10.22</span><br/>
             <b>בהנחיית: </b> אורלי קובו ואיתי שרון<br/>
             חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד
-            <br/><br/>
+            <br ref={myRef}/><br/>
         </p>
         <Row>
             <Col span={18}><Gallery /></Col>
             <Col span={6}>
-                <ContactView refProp={myRef} id="contact-us"/>
+                <ContactView id="contact-us"/>
             </Col>
         </Row>
 

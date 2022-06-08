@@ -16,10 +16,8 @@ const PackageView = ({title, executerScroll}) => (
         </Descriptions.Item>
         <Descriptions.Item label="לינה" span={3}>4 לילות פנסיון מלא</Descriptions.Item>
         <Descriptions.Item label="מחיר" span={3} >
-            חדר זוגי - 
-            4500&#8362;
-            לאדם <br />
-            חדר יחיד - 5300&#8362;
+            חדר זוגי - 4500 ש"ח לאדם <br />
+            חדר יחיד - 5300 ש"ח
         </Descriptions.Item>
         <Descriptions.Item label="פעילות" span={3}>
             טיול לעיר העתיקה איראפטרה וארוחת ערב בעיר <br />

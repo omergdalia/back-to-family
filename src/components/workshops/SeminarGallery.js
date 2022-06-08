@@ -18,8 +18,7 @@ const galleryImages = [
     {alt: "crete5", src: crete5},
     {alt: "crete6", src: crete6},
     {alt: "crete7", src: crete7},
-
-]
+];
 
 
 const contentStyle = {
@@ -34,10 +33,10 @@ const carouselStyle ={
     height:'400px',
     background:'teal',
     marginLeft: '50px'
-}
+};
   
 const Gallery = () => (
-    <Carousel id="crete-seminar-gallery" style={carouselStyle}>
+    <Carousel id="crete-seminar-gallery" autoplay autoplaySpeed={6000} effect="fade" style={carouselStyle}>
         {
             galleryImages.map(({alt, src}) => 
                 <div>
