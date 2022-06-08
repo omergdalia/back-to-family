@@ -35,7 +35,7 @@ const carouselStyle ={
 };
   
 const Gallery = ({id}) => (
-    <Carousel id={id} autoplay autoplaySpeed={5000} effect="fade" style={carouselStyle}>
+    <Carousel id={id} autoplay autoplaySpeed={5000} effect="fade" style={carouselStyle} className="col-1">
         {
             galleryImages.map(({alt, src}) => 
                 <div>

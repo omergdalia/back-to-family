@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { Affix, Button, Divider } from "antd";
+import React from "react";
+import { Button, Divider } from "antd";
 import { Icon } from "semantic-ui-react";
 import { FaUmbrellaBeach } from 'react-icons/fa';
 
@@ -11,17 +11,24 @@ import PackageView from "./workshops/PackageView";
 const docsURI = "https://docs.google.com/forms/d/e/1FAIpQLSfp3sond6hgtrdNDZfQenty-iL1BblQak13ZyNUO9XaHewPDQ/viewform?usp=sf_link";
 
 
-const ContactFromButton = () => <Button id="form-button" type="primary" href={docsURI} target="_blank" >מלאו פרטים</Button>
+const ContactFromButton = () => (
+    <Button id="form-button" type="primary" href={docsURI} target="_blank" >
+        להרשמה
+    </Button>
+);
 
 const ContactView = ({id}) => {
     return (
-        <div id={id} className="contact">
-            <h3>לפרטים ולהרשמה:</h3>
-            <p>
-                <Icon name="phone" /> אורלי - 050-7266778 <br/>
-                <Icon name="phone" /> איתי - 054-4588573<br/>
-            </p>
-            <ContactFromButton />
+        <div id={id} className="contact col-1">
+            <div>
+                ליצירת קשר: 
+                <Icon name="phone" /> אורלי - 050-7266778 &nbsp;&nbsp;
+                <Icon name="phone" /> איתי - 054-4588573
+            </div>
+            <div id="test">
+                <ContactFromButton />
+            </div>
+            
         </div>
     );
 }
@@ -38,11 +45,6 @@ const ActivityInfo = () => (
 );
 
 const WorkshopsPage = () => {
-
-    const myRef = useRef(null);
-    const executeScroll = () => myRef.current.scrollIntoView()    
-
-
     return <div style={{ fontSize: 16}} id="workshop-page">
         <h1>אינטנסיב פלייבק בכרתים</h1>
         <p>
@@ -50,7 +52,7 @@ const WorkshopsPage = () => {
             <span className="date">29.09.22 - 03.10.22</span><br/>
             <b>בהנחיית: </b> אורלי קובו ואיתי שרון<br/>
             חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד
-            <br ref={myRef}/><br/>
+            <br /><br />
         </p>
 
         <div id="top-row">
@@ -89,10 +91,9 @@ const WorkshopsPage = () => {
         </p>
         
         <Divider />
-        <PackageView title={<h2>על החבילה</h2>} executerScroll={executeScroll}/>
-        <Affix offsetBottom={20} dir="ltr" id="fixed-form-button">
-            <ContactFromButton />
-        </Affix>
+        <PackageView title={<h2>על החבילה</h2>} />
+        <br />
+        <ContactView />
     </div>
 }
 

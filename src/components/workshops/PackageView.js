@@ -1,15 +1,10 @@
 import React from 'react';
-import { Button, Descriptions } from 'antd';
+import { Descriptions } from 'antd';
 import { MdFlightTakeoff, MdFlightLand } from 'react-icons/md';
 
 
-const PackageView = ({title, executerScroll}) => (
-    <Descriptions 
-    className='col-1'
-    title={title} 
-    size="small"
-    bordered
-    extra={<Button type="primary" onClick={executerScroll}>צרו קשר</Button>} >
+const PackageView = ({title, extra}) => (
+    <Descriptions className='col-1' title={title} size="small" bordered>
         <Descriptions.Item label="טיסות" span={3}>
             <MdFlightTakeoff /> טיסה ישירה להרקליון, כרתים בתאריך ה-29.9.22 בשעה 11:40 [Aegean] <br/>
             <MdFlightLand /> טיסה ישירה מהרקליון, כרתים בתאריך ה-03.10.22 בשעה 23:50 [Aegean] <br />

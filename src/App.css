@@ -61,58 +61,26 @@ span.date {
   font-size: inherit !important;
 }
 
-#top-row {
-  display: flex;
-  flex-flow: row;
-  align-items: flex-start;
-  gap: 20px 20px;
-}
-
-#top-row .ant-carousel {
-  width: 75%;
-}
-
-#contact-us {
-  width: 25%;
-}
-
 .contact {
   background-color: #c7dbde;
-  border-radius: 5px;
-  padding: 2%;
-}
-
-.contact #form-button {
-  margin: 0 25%;
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 992) {
-  #top-row .ant-carousel {
-    width: 80%;
-  }
-  #contact-us {
-    width: 20%;
-  }
+  padding: 1%;
+  margin-top: 1vh;
+  border-radius: 15px;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
 @media screen and (max-width: 768px) {
-  #top-row {
-    display: block;
-  }
-  #top-row .ant-carousel {
-    width: 100%;
-  }
   #top-row .ant-carousel .slick-slider {
     height: 200px !important;
   }
   #top-row .ant-carousel img {
     height: 200px !important;
   }
-  #contact-us {
-    display: flex;
-    flex-direction: row;
+  .contact {
+    padding: 2%; 
   }
 }
 
