@@ -39,16 +39,8 @@ span.date {
 }
 
 #workshop-header {
-  border-radius: 10px;
   text-align: center;
-  font-size: larger;
-}
-
-#workshop-header h1 {
-  margin: 0px 0px 7px;
-}
-#workshop-header p1 {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
