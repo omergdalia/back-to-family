@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Affix, Button, Col, Divider, Row } from "antd";
+import { Affix, Button, Divider } from "antd";
 import { Icon } from "semantic-ui-react";
 import { FaUmbrellaBeach } from 'react-icons/fa';
 
