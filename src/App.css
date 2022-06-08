@@ -1,7 +1,13 @@
 @import '~antd/dist/antd.css';
 
+/*
+side color - #eb7f34
+side color 2 - #df4c73
+*/
+
+
 .ant-layout-header {
-  background-color: #df4c73  ;
+  background-color: #eb7f34  ;
   color: white;
   height: 50px;
   line-height: 50px;
@@ -18,7 +24,7 @@
 
 .ant-layout-footer {
   text-align: center;
-  background-color: darkolivegreen;
+  background-color: #1f305e;
   color: white;
   padding: 0.5em;
 }
@@ -46,7 +52,7 @@ span.date {
 }
 
 .ant-space-item {
-  background-color: #df4c73;
+  background-color: #eb7f34;
 }
 
 .ant-space-item .ant-card {
@@ -74,7 +80,7 @@ span.date {
 }
 
 .ant-descriptions-divider {
-  color: #df4c73;
+  color: #eb7f34;
 }
 
 .ant-descriptions-view {
@@ -84,4 +90,14 @@ span.date {
 .ant-descriptions-view .ant-descriptions-item-label {
   background-color: #c7dbde;
   font-weight: bold;
+}
+
+.contact {
+  background-color: #c7dbde;
+  border-radius: 5px;
+  padding: 5%;
+}
+
+#form-button {
+  margin: 0 25%;
 }
