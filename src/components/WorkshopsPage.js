@@ -7,6 +7,9 @@ import SeminarProgram from "./workshops/SeminarProgram";
 import Gallery from "./workshops/SeminarGallery";  
 import PesonalView from "./workshops/PersonelView";
 import PackageView from "./workshops/PackageView";
+import Reviews from "./workshops/Reviews.jsx";
+
+
 
 const docsURI = "https://docs.google.com/forms/d/e/1FAIpQLSfp3sond6hgtrdNDZfQenty-iL1BblQak13ZyNUO9XaHewPDQ/viewform?usp=sf_link";
 
@@ -50,7 +53,7 @@ const WorkshopsPage = () => {
             <h1>אינטנסיב פלייבק בכרתים</h1>
             <p>
                 <b>תאריכים: </b> 
-                <span className="date">29.09.22 - 03.10.22</span><br/>
+                <span className="date">19.09.23 - 23.09.23</span><br/>
                 <b>בהנחיית: </b> אורלי קובו ואיתי שרון<br/>
                 חמישה ימים של פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד 
             </p>
@@ -68,9 +71,11 @@ const WorkshopsPage = () => {
         <Divider />
         <h2>אודות המנחים</h2>
         <PesonalView />
+        <Reviews />
+        
 
         <Divider />
-        <h2>אודות התוכנית</h2>
+        <h2>תוכנית לדוגמא (מסדנת אווירה ספטמבר 2022)</h2>
         <SeminarProgram />
 
         <Divider />
