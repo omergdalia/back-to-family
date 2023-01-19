@@ -1,7 +1,7 @@
 {
   "main.css": "/back-to-family/static/css/main.dfddc5ed.chunk.css",
-  "main.js": "/back-to-family/static/js/main.e5f6c57b.chunk.js",
-  "main.js.map": "/back-to-family/static/js/main.e5f6c57b.chunk.js.map",
+  "main.js": "/back-to-family/static/js/main.938e503e.chunk.js",
+  "main.js.map": "/back-to-family/static/js/main.938e503e.chunk.js.map",
   "static/js/1.c24d8e46.chunk.js": "/back-to-family/static/js/1.c24d8e46.chunk.js",
   "static/js/1.c24d8e46.chunk.js.map": "/back-to-family/static/js/1.c24d8e46.chunk.js.map",
   "static/css/2.66b8cb6f.chunk.css": "/back-to-family/static/css/2.66b8cb6f.chunk.css",
@@ -18,10 +18,10 @@
   "static/media/crt7.png": "/back-to-family/static/media/crt7.8369d96c.png",
   "static/media/etay-sharon.jpg": "/back-to-family/static/media/etay-sharon.5651d6b1.jpg",
   "static/media/orly-kovo.jpg": "/back-to-family/static/media/orly-kovo.5d31ce18.jpg",
-  "static/media/semantic.min.css": "/back-to-family/static/media/flags.9c74e172.png",
+  "static/media/semantic.min.css": "/back-to-family/static/media/brand-icons.a1a749e8.svg",
   "static/css/main.dfddc5ed.chunk.css.map": "/back-to-family/static/css/main.dfddc5ed.chunk.css.map",
   "static/css/2.66b8cb6f.chunk.css.map": "/back-to-family/static/css/2.66b8cb6f.chunk.css.map",
   "index.html": "/back-to-family/index.html",
-  "precache-manifest.cee3afa41dec6dbbe2415aabca1a8702.js": "/back-to-family/precache-manifest.cee3afa41dec6dbbe2415aabca1a8702.js",
+  "precache-manifest.c51f3998b2b4b80fc54f44eebe89d234.js": "/back-to-family/precache-manifest.c51f3998b2b4b80fc54f44eebe89d234.js",
   "service-worker.js": "/back-to-family/service-worker.js"
 }
