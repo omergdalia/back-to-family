@@ -27,7 +27,7 @@ const Gallery = ({id}) => (
     <Carousel id={id} autoplay effect="fade" style={carouselStyle} className="col-1">
         {
             galleryImages.map((value, index) => 
-                <div>
+                <div key={value}>
                     <Image
                         src={value} 
                         preview={false}
