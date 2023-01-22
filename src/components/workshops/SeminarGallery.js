@@ -1,25 +1,14 @@
 import React from "react";
 import { Carousel, Image } from "antd";
 
-import crete1 from '../../images/crete/crt1.png';
-import crete2 from '../../images/crete/crt2.png';
-import crete3 from '../../images/crete/crt3.png';
-import crete4 from '../../images/crete/crt4.png';
-import crete5 from '../../images/crete/crt5.png';
-import crete6 from '../../images/crete/crt6.png';
-import crete7 from '../../images/crete/crt7.png';
+function importAll(r) {
+    return r.keys().map(r);
+}
 
 
-const galleryImages = [
-    {alt: "crete1", src: crete1},
-    {alt: "crete2", src: crete2},
-    {alt: "crete3", src: crete3},
-    {alt: "crete4", src: crete4},
-    {alt: "crete5", src: crete5},
-    {alt: "crete6", src: crete6},
-    {alt: "crete7", src: crete7},
-];
-
+const galleryImages = importAll(
+    require.context('../../images/resorts/resort2', false, /\.(webp|png|jpe?g|svg)$/)
+);
 
 const contentStyle = {
     height:'400px',
@@ -37,9 +26,14 @@ const carouselStyle ={
 const Gallery = ({id}) => (
     <Carousel id={id} autoplay effect="fade" style={carouselStyle} className="col-1">
         {
-            galleryImages.map(({alt, src}) => 
+            galleryImages.map((value, index) => 
                 <div>
-                    <Image src={src} preview={false} alt={alt} style={contentStyle} />
+                    <Image
+                        src={value} 
+                        preview={false}
+                        alt={`resort-image-${index}`}
+                        style={contentStyle}
+                    />
                 </div>
             )
         }
