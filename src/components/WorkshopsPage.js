@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Divider } from "antd";
+import { Button, Divider, Space } from "antd";
 import { Icon } from "semantic-ui-react";
 
 import SeminarProgram from "./workshops/SeminarProgram";
@@ -13,7 +13,7 @@ import Reviews from "./workshops/Reviews.jsx";
 const docsURI = "https://docs.google.com/forms/d/e/1FAIpQLSfp3sond6hgtrdNDZfQenty-iL1BblQak13ZyNUO9XaHewPDQ/viewform?usp=sf_link";
 
 const ContactFromButton = () => (
-    <Button id="form-button" type="primary" style={{borderRadius: "10px"}} href={docsURI} target="_blank" >
+    <Button className="contact-button" type="primary" style={{borderRadius: "10px"}} href={docsURI} target="_blank" >
         להרשמה
     </Button>
 );
@@ -21,12 +21,12 @@ const ContactFromButton = () => (
 const ContactView = ({id}) => {
     return (
         <div id={id} className="contact col-1">
+            <div>ליצירת קשר:</div>
+            <Space wrap>
+                <span><Icon name="phone" /> אורלי - 050-7266778</span>
+                <span><Icon name="phone" /> איתי - 054-4588573</span>
+            </Space>
             <div>
-                ליצירת קשר: 
-                <Icon name="phone" /> אורלי - 050-7266778 &nbsp;&nbsp;
-                <Icon name="phone" /> איתי - 054-4588573
-            </div>
-            <div id="test">
                 <ContactFromButton />
             </div>
         </div>

@@ -62,7 +62,7 @@ span.date {
   grid-gap: 1em !important;
 }
 
-.ant-space-item {
+.personel-space > .ant-space-item {
   background-color: #eb7f34;
 }
 
@@ -91,7 +91,7 @@ span.date {
     height: 200px !important;
   }
   .contact {
-    padding: 2%; 
+    padding: 2%;
   }
 }
 
@@ -103,6 +103,10 @@ span.date {
 @media only screen and (max-width: 600px) {
   .col-1 {
     width: 100%;
+  }
+
+  .contact-button {
+    margin-top: 10px;
   }
 }
 

@@ -27,7 +27,7 @@ const PersonelCard = ({name, content, image}) => {
 }
 
 
-const PesonalView = () => <Space align="start" wrap>
+const PesonalView = () => <Space align="start" className="personel-space" wrap>
     {personelInfo.map((props) => <PersonelCard key={props.name} {...props} />)}
 </Space>;
 
