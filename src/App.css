@@ -82,6 +82,10 @@ span.date {
   justify-content: space-between;
 }
 
+.contact .contact-button {
+  border-radius: 10px;
+}
+
 
 @media screen and (max-width: 600px) {
   #top-row .ant-carousel .slick-slider {
