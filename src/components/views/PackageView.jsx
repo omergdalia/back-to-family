@@ -3,7 +3,7 @@ import { Descriptions } from 'antd';
 import { MdFlightTakeoff, MdFlightLand } from 'react-icons/md';
 
 
-const PackageView = ({title, extra}) => (
+const PackageView = ({ title }) => (
     <Descriptions className='col-1' title={title} size="small" bordered>
         <Descriptions.Item label="טיסות" span={3}>
             <MdFlightTakeoff /> טיסה ישירה להרקליון, כרתים ב-18.09.23<br/>

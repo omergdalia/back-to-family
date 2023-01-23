@@ -16,7 +16,7 @@ const FooterContact = ({isMale, name, facebookName, emailAddress}) => (
 
 const WebFooter = () => (
     <Footer>
-        פלייבק בכרתים ©2023
+        פלייבק בכרתים ©{new Date().getFullYear()}
         <FooterContact isMale={false} name="אורלי קובו" facebookName="orly.kovo" emailAddress="orlykov@yahoo.com"/>
         <FooterContact isMale={true} name="איתי שרון" facebookName="etay.sharon" emailAddress="etay.sharon@gmail.com"/>
     </Footer>

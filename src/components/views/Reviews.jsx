@@ -3,9 +3,7 @@ import { Avatar, Comment, List } from 'antd';
 import ShowMoreText from "react-show-more-text";
 import { FaUser } from 'react-icons/fa';
 
-import reviews from './reviews.json';
-
-const Reviews = () => (
+const Reviews = ({ reviews }) => (
     <List
       className="comment-list col-1"
       header={`${reviews.length} תגובות`}

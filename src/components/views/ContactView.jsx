@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Space } from "antd";
 import { Icon } from "semantic-ui-react";
 
-const docsURI = "https://docs.google.com/forms/d/e/1FAIpQLSexma5UrifZioOwzc3DawUujdaBjFz1hlHkEh3lvKLEI8QuwQ/viewform?usp=sharing";
+const docsURI = process.env.REACT_APP_DOCS_URI;
 
 const ContactFormButton = () => (
     <Button className="contact-button" type="primary" href={docsURI} target="_blank">

@@ -2,8 +2,8 @@ import React from 'react';
 import { Layout, BackTop} from 'antd';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import WebFooter from './components/WebFooter';
-import WorkshopsPage from './components/WorkshopsPage';
+import WebFooter from './components/WebFooter.jsx';
+import WorkshopsPage from './components/pages/WorkshopsPage.jsx';
 
 import './App.css';
 

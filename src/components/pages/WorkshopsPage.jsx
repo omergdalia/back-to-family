@@ -1,14 +1,17 @@
 import React from "react";
 import { Divider } from "antd";
 
-import SeminarProgram from "./workshops/SeminarProgram";
-import Gallery from "./workshops/SeminarGallery";  
-import PesonalView from "./workshops/PersonelView";
-import PackageView from "./workshops/PackageView";
-import ResortInfo from "./workshops/ResortInfo";
-import Reviews from "./workshops/Reviews.jsx";
-import ContactView from "./workshops/ContactView.jsx";
+import SeminarProgram from "../views/SeminarProgram.jsx";
+import Gallery from "../views/SeminarGallery.jsx";  
+import PesonalView from "../views/PersonelView.jsx";
+import PackageView from "../views/PackageView.jsx";
+import ResortInfo from "../views/ResortInfo.jsx";
+import Reviews from "../views/Reviews.jsx";
+import ContactView from "../views/ContactView.jsx";
 
+import configData from '../../config.js';
+
+const {galleryImages, programs, personel, reviews } = configData;
 
 const ActivityInfo = () => (
     <p>
@@ -31,7 +34,7 @@ const WorkshopsPage = () => {
         </div>
 
         <div id="top-row">
-            <Gallery id="crete-seminar-gallery" />
+            <Gallery id="crete-seminar-gallery" images={galleryImages} />
             <ContactView id="contact-us"/>
         </div>
 
@@ -41,12 +44,17 @@ const WorkshopsPage = () => {
 
         <Divider />
         <h2>אודות המנחים</h2>
-        <PesonalView />
-        <Reviews />
+        <PesonalView personelInfo={personel}/>
+        <Reviews reviews={reviews}/>
         
-        {/* <Divider />
-        <h2>תוכנית לדוגמא (מסדנת אווירה ספטמבר 2022)</h2>
-        <SeminarProgram /> */}
+        {
+            process.env.REACT_APP_SHOW_PROGRAM.toLowerCase() === "true" ? 
+            <>
+                <Divider />
+                <h2>תוכנית לדוגמא (מסדנת אווירה ספטמבר 2022)</h2>
+                <SeminarProgram programs={programs}/>
+            </> : ""
+        }
 
         <Divider />
         <h2>על הריזורט שלנו</h2>

@@ -1,10 +1,7 @@
 import React, { useMemo } from "react";
 import { Avatar , Card, Space} from 'antd';
 
-import personelInfo from './personel.json';
-
 const { Meta } = Card;
-
 
 const PersonelCard = ({name, description, image}) => {
     const imageSrc = useMemo(() => {
@@ -27,7 +24,7 @@ const PersonelCard = ({name, description, image}) => {
 }
 
 
-const PesonalView = () => <Space align="start" className="personel-space" wrap>
+const PesonalView = ({ personelInfo }) => <Space align="start" className="personel-space" wrap>
     {personelInfo.map((props) => <PersonelCard key={props.name} {...props} />)}
 </Space>;
 
