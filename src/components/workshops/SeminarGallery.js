@@ -14,7 +14,7 @@ const contentStyle = {
     height:'400px',
     Width:'auto',
     objectFit:'fill',
-  };
+};
 
 const carouselStyle ={
     borderRadius:'20px',

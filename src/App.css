@@ -134,3 +134,8 @@ span.date {
   background-color: #c7dbde;
   font-weight: bold;
 }
+
+.room-image {
+  height: 16vh;
+  width: 24vh;
+}

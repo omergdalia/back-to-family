@@ -1,21 +1,19 @@
 import React from "react";
 import { Button, Divider } from "antd";
 import { Icon } from "semantic-ui-react";
-import { FaUmbrellaBeach } from 'react-icons/fa';
 
 import SeminarProgram from "./workshops/SeminarProgram";
 import Gallery from "./workshops/SeminarGallery";  
 import PesonalView from "./workshops/PersonelView";
 import PackageView from "./workshops/PackageView";
+import ResortInfo from "./workshops/ResortInfo";
 import Reviews from "./workshops/Reviews.jsx";
-
 
 
 const docsURI = "https://docs.google.com/forms/d/e/1FAIpQLSfp3sond6hgtrdNDZfQenty-iL1BblQak13ZyNUO9XaHewPDQ/viewform?usp=sf_link";
 
-
 const ContactFromButton = () => (
-    <Button id="form-button" type="primary" href={docsURI} target="_blank" >
+    <Button id="form-button" type="primary" style={{borderRadius: "10px"}} href={docsURI} target="_blank" >
         להרשמה
     </Button>
 );
@@ -31,7 +29,6 @@ const ContactView = ({id}) => {
             <div id="test">
                 <ContactFromButton />
             </div>
-            
         </div>
     );
 }
@@ -76,32 +73,7 @@ const WorkshopsPage = () => {
 
         <Divider />
         <h2>על הריזורט שלנו</h2>
-        <div>
-            מתחם וילות ובקתות מפנקות עם נוף לים וחוף פרטי צמוד<br />
-            כל היחידות עם <b>חדרי רחצה פרטיים ומיזוג אוויר</b>.
-            {/* TOOD: Add images of rooms */}
-            <ul style={{maxWidth: '45em'}}>
-                <li>
-                    וילה המכילה 2 חדרים זוגיים נוחים ויפים, מקלחת ושירותים לכל חדר, מטבח מאובזר, סלון, טלוויזיה ומרפסת עם נוף לים הפתוח.
-                </li>
-                <li>
-                    דירה עם נוף מדהים לים המתאימה ל- 3 אנשים עם חדר רחצה פרטי, פינת ישיבה, מטבח מאובזר.
-                </li>
-                <li>
-                    דירת סטודיו מרהיבה המתאימה ל- 3 אנשים, מקלחת ושירותים, מטבח מאובזר, סלון, טלוויזיה ומרפסת עם נוף לים הפתוח.
-                </li>
-                <li>
-                    2 בקתות עץ עם נוף מרהיב לים כשבכל בקתה מטבחון, חדר רחצה ומרפסת פרטית. 2 אנשים בבקתה.
-                </li>
-                <li>
-                    במתחם קיים סטודיו מרווח ונעים לסדנאות, פינות ישיבה חיצוניות המשקיפות לים ולנוף הפתוח, פינת אוכל חיצונית, סאונה ועוד.
-                </li>
-            </ul>
-            <h3><FaUmbrellaBeach/> חוף הים</h3>
-                חוף פרטי עם דק מעץ והצללה<br />
-                הריזורט ממוקם באזור FERMA<br />
-                הריזורט נמצא במיקום מצוין – מרחק של שעה וחצי נסיעה משדה"ת הרקליון, 10 דק' נסיעה מהעיר העתיקה - איראפטרה 
-        </div>
+        <ResortInfo />
         
         <Divider />
         <PackageView title={<h2>על החבילה</h2>} />
