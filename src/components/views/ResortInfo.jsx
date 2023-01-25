@@ -1,6 +1,7 @@
 import React from "react";
 import { Image, Space } from "antd";
 import { FaUmbrellaBeach } from 'react-icons/fa';
+import { GrMapLocation } from 'react-icons/gr';
 
 import lroom1 from '../../images/resorts/resort2/left room (38).webp';
 import lroom2 from '../../images/resorts/resort2/left room (43).webp';
@@ -73,8 +74,8 @@ const ResortInfo = () =>
             </li>
         </ul>
         <h3><FaUmbrellaBeach /> חוף הים</h3>
-        חוף פרטי עם דק מעץ והצללה<br />
-        הריזורט ממוקם באזור FERMA<br />
+        חוף פרטי עם דק מעץ והצללה<br /><br />
+        <GrMapLocation /> הריזורט ממוקם באזור FERMA<br />
         הריזורט נמצא במיקום מצוין – מרחק של שעה וחצי נסיעה משדה"ת הרקליון, 10 דק' נסיעה מהעיר העתיקה - איראפטרה
     </div>;
 

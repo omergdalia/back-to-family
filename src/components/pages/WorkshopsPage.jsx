@@ -11,12 +11,13 @@ import ContactView from "../views/ContactView.jsx";
 
 import configData from '../../config.js';
 
-const {galleryImages, programs, personel, reviews } = configData;
+const { galleryImages, programs, personel, reviews } = configData;
 
 const ActivityInfo = () => (
     <p>
+        חמישה ימים של סדנאות פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד<br />
         האינטנסיב יתקיים במתכונת הכוללת גם עבודה אישית לכל משתתפ.ת.<br />
-        בנוסף נטייל, נאכל טוב, נבלה בים, נסייר בעיר עתיקה ונהנה מהשקט, השלווה  והיופי שבכרתים הקסומה.<br />
+        בנוסף נטייל, נאכל טוב, נבלה בים, נסייר בעיר עתיקה ונהנה מהשקט, השלווה  והיופי שבכרתים הקסומה.
     </p>
     
 );
@@ -24,13 +25,14 @@ const ActivityInfo = () => (
 const WorkshopsPage = () => {
     return <div style={{ fontSize: 16}} id="workshop-page">
         <div id="workshop-header" className="col-1">
-            <h1>אינטנסיב פלייבק בכרתים II</h1>
-            <p>
-                <b>תאריכים: </b> 
-                <span className="date">18.09.23 - 22.09.23</span><br/>
-                <b>בהנחיית: אורלי קובו ואיתי שרון</b><br/>
-                חמישה ימים של סדנאות פלייבק, תנועה ומוזיקה בריזורט מפנק עם חוף ים צמוד
-            </p>
+            <center>
+                <h1>אינטנסיב פלייבק כרתים II</h1>
+                <p>
+                    <b>תאריכים: </b> 
+                    <span className="date">22.09.23 - 18.09.23</span><br/>
+                    <b>בהנחיית: אורלי קובו ואיתי שרון</b><br/>
+                </p>
+            </center>
         </div>
 
         <div id="top-row">
@@ -48,10 +50,6 @@ const WorkshopsPage = () => {
                 <Divider />
                 <h2>אודות המנחים</h2>
                 <PesonalView personelInfo={personel}/>
-                { 
-                    process.env.REACT_APP_SHOW_REVIEWS.toLowerCase() === "true" && 
-                    <Reviews reviews={reviews}/>
-                }
             </> : ""
         }        
         {
@@ -77,6 +75,14 @@ const WorkshopsPage = () => {
                 <PackageView title={<h2>על החבילה</h2>} />
                 <br />
             </> : ""
+        }
+        {
+            process.env.REACT_APP_SHOW_REVIEWS.toLowerCase() === "true" && 
+            <>
+                <Divider />
+                <h2>כתבו עלינו אחרי אינטנסיב כרתים הראשון</h2>
+                <Reviews reviews={reviews}/>
+            </>
         }
 
         <ContactView />    
