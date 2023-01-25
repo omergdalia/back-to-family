@@ -4,7 +4,7 @@ import programs from './config/programs.json';
 import { gallery } from './config/images.json';
 
 
-const galleryImages = gallery.map((img, _) => require(`./images/resorts/${img}`));
+const galleryImages = gallery.map((img, _) => require(`./images/${img}`));
 
 const configData = {
     reviews,

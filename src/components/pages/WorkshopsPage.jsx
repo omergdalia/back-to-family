@@ -26,11 +26,13 @@ const WorkshopsPage = () => {
     return <div style={{ fontSize: 16}} id="workshop-page">
         <div id="workshop-header" className="col-1">
             <center>
-                <h1>אינטנסיב פלייבק כרתים II</h1>
+                <h1 style={{fontSize: "xx-large"}}>אינטנסיב פלייבק כרתים II</h1>
                 <p>
-                    <b>תאריכים: </b> 
-                    <span className="date">22.09.23 - 18.09.23</span><br/>
-                    <b>בהנחיית: אורלי קובו ואיתי שרון</b><br/>
+                    <div style={{fontSize: "larger", marginBottom: "1vh"}}>
+                        <b>תאריכים: </b> 
+                        <span className="date">22.09.23 - 18.09.23</span><br/>
+                    </div>
+                    <b style={{fontSize: "27px"}}>בהנחיית: אורלי קובו ואיתי שרון</b><br/>
                 </p>
             </center>
         </div>

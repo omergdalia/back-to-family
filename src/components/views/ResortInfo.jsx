@@ -36,16 +36,19 @@ const ResortInfo = () =>
                 וילה המכילה 2 חדרים זוגיים נוחים ויפים, מקלחת ושירותים לכל חדר, מטבח מאובזר, סלון, טלוויזיה ומרפסת עם נוף לים הפתוח.
                 <br />
                 <RoomImageArea>
-                    <RoomImage src={lroom1} alt={`left room image 1`} />
-                    <RoomImage src={lroom2} alt={`left room image 2`} />
-                    <RoomImage src={lroom3} alt={`left room image 3`} />
-                    <RoomImage src={rroom1} alt={`right room image 1`} />
-                    <RoomImage src={rroom2} alt={`right room image 2`} />
-                    <RoomImage src={rroom3} alt={`right room image 3`} />
+                    <RoomImage src={rroom1} alt={`east room image 1`} />
+                    <RoomImage src={rroom2} alt={`east room image 2`} />
+                    <RoomImage src={rroom3} alt={`east room image 3`} />
                 </RoomImageArea>
             </li>
             <li>
                 דירה עם נוף מדהים לים המתאימה ל- 3 אנשים עם חדר רחצה פרטי, פינת ישיבה, מטבח מאובזר.
+                <br />
+                <RoomImageArea>
+                    <RoomImage src={lroom1} alt={`west room image 1`} />
+                    <RoomImage src={lroom2} alt={`west room image 2`} />
+                    <RoomImage src={lroom3} alt={`west room image 3`} />
+                </RoomImageArea>
             </li>
             <li>
                 דירת סטודיו מרהיבה המתאימה ל- 3 אנשים, מקלחת ושירותים, מטבח מאובזר, סלון, טלוויזיה ומרפסת עם נוף לים הפתוח.
@@ -73,10 +76,10 @@ const ResortInfo = () =>
                 </RoomImageArea>
             </li>
         </ul>
-        <h3><FaUmbrellaBeach /> חוף הים</h3>
-        חוף פרטי עם דק מעץ והצללה<br /><br />
-        <GrMapLocation /> הריזורט ממוקם באזור FERMA<br />
-        הריזורט נמצא במיקום מצוין – מרחק של שעה וחצי נסיעה משדה"ת הרקליון, 10 דק' נסיעה מהעיר העתיקה - איראפטרה
+        <h3><FaUmbrellaBeach /> חוף הים ועוד </h3>
+        חוף ים פרטי צמוד עם דק מעץ והצללה<br /><br />
+        <h3><GrMapLocation /> המיקום</h3>
+        הריזורט נמצא באזור FERMA במיקום מצוין – מרחק של שעה וחצי נסיעה משדה"ת הרקליון, 10 דק' נסיעה מהעיר העתיקה - איראפטרה
     </div>;
 
 export default ResortInfo;
