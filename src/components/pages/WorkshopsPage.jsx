@@ -42,11 +42,18 @@ const WorkshopsPage = () => {
         <h2>מה באינטנסיב?</h2>
         <ActivityInfo />
 
-        <Divider />
-        <h2>אודות המנחים</h2>
-        <PesonalView personelInfo={personel}/>
-        <Reviews reviews={reviews}/>
-        
+        {
+            process.env.REACT_APP_SHOW_PERSONEL.toLowerCase() === "true" ?
+            <>
+                <Divider />
+                <h2>אודות המנחים</h2>
+                <PesonalView personelInfo={personel}/>
+                { 
+                    process.env.REACT_APP_SHOW_REVIEWS.toLowerCase() === "true" && 
+                    <Reviews reviews={reviews}/>
+                }
+            </> : ""
+        }        
         {
             process.env.REACT_APP_SHOW_PROGRAM.toLowerCase() === "true" ? 
             <>
@@ -55,15 +62,24 @@ const WorkshopsPage = () => {
                 <SeminarProgram programs={programs}/>
             </> : ""
         }
+        {
+            process.env.REACT_APP_SHOW_RESORT.toLowerCase() === "true" ? 
+            <>
+                <Divider />
+                <h2>על הריזורט שלנו</h2>
+                <ResortInfo />
+            </> : ""
+        }
+        {
+            process.env.REACT_APP_SHOW_PACKAGE.toLowerCase() === "true" ? 
+            <>
+                <Divider />
+                <PackageView title={<h2>על החבילה</h2>} />
+                <br />
+            </> : ""
+        }
 
-        <Divider />
-        <h2>על הריזורט שלנו</h2>
-        <ResortInfo />
-        
-        <Divider />
-        <PackageView title={<h2>על החבילה</h2>} />
-        <br />
-        <ContactView />
+        <ContactView />    
     </div>
 }
 
