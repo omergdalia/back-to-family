@@ -76,7 +76,7 @@ const ResortInfo = () =>
                 </RoomImageArea>
             </li>
         </ul>
-        <h3><FaUmbrellaBeach /> חוף הים ועוד </h3>
+        <h3><FaUmbrellaBeach /> חוף הים </h3>
         חוף ים פרטי צמוד עם דק מעץ והצללה<br /><br />
         <h3><GrMapLocation /> המיקום</h3>
         הריזורט נמצא באזור FERMA במיקום מצוין – מרחק של שעה וחצי נסיעה משדה"ת הרקליון, 10 דק' נסיעה מהעיר העתיקה - איראפטרה
